@@ -6,7 +6,19 @@ import ReactDOM from "react-dom";
 import "../styles/index.css";
 
 //import your own components
-import Home from "./component/home.jsx";
+import Nav from "./component/nav.jsx";
+import Contenedor from "./component/contenedor.jsx";
+import Footer from "./component/footer.jsx";
 
-//render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+//create your component
+const MyMainComponent = () => {
+    return (
+        <div className="container-fluid mx-0 px-0">
+            <Nav />
+            <Contenedor />
+            <Footer />
+        </div>
+    );
+};
+
+ReactDOM.render(<MyMainComponent />, document.querySelector("#app"));
